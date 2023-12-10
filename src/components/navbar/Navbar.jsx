@@ -1,14 +1,15 @@
 import React from "react";
 import "./navbar.scss";
 import { IoSearch } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <>
       <nav className="navbar fw-bold navbar-expand-lg navbar-light bg-light shadow fixed-top">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           Fake Store
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -27,14 +28,17 @@ function Navbar() {
         >
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <a className="nav-link" href="#home">
+              <Link className="nav-link" to="/">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link
+                className="nav-link"
+                to="https://github.com/Sarina-R/fake-store"
+              >
                 Code Link
-              </a>
+              </Link>
             </li>
             <li className="nav-item dropdown">
               <a
@@ -49,9 +53,15 @@ function Navbar() {
                 Filter By Category
               </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a className="dropdown-item">Electronics</a>
-                <a className="dropdown-item">Men's Clothing</a>
-                <a className="dropdown-item">Women's Clothing</a>
+                <Link className="dropdown-item" to="/products/electronics">
+                  Electronics
+                </Link>
+                <Link className="dropdown-item" to="/products/men's clothing">
+                  Men's Clothing
+                </Link>
+                <Link className="dropdown-item" to="/products/women's clothing">
+                  Women's Clothing
+                </Link>{" "}
               </div>
             </li>
           </ul>
