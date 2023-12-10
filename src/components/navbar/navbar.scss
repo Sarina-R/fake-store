@@ -1,0 +1,27 @@
+@use "../../index.scss" as *;
+
+.navbar {
+  padding: 10px 4rem !important;
+  li {
+    margin: auto 1rem;
+  }
+  form {
+    position: relative;
+    input {
+      margin-top: 1.2rem;
+    }
+    i {
+      position: absolute;
+      top: 1.2rem;
+      left: 80%;
+      font-size: 1.25rem;
+      @media screen and (max-width: 992px) {
+        top: 0;
+        left: 95%;
+      }
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
